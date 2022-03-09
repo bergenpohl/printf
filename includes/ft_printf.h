@@ -36,14 +36,14 @@ typedef struct	s_profile
 	size_t		rv;
 }				t_profile;
 
-int				ft_printf(const char *format, ...);
+int			ft_printf(const char *format, ...);
 t_profile		*pf_init_profile(const char **format);
 void			pf_clear_parsed(t_profile *profile);
-int				pf_parse_format(t_profile *profile);
+int			pf_parse_format(t_profile *profile);
 size_t			pf_parse_conversion(t_profile *profile);
 void			pf_find_pad(t_profile *profile, int dir);
 void			pf_find_cut(t_profile *profile);
-int				pf_calc_input(t_profile *profile);
+int			pf_calc_input(t_profile *profile);
 void			pf_format(t_profile *profile);
 void			pf_pad(t_profile *profile, size_t len,
 				size_t cut, char padding);
